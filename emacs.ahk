@@ -1,6 +1,8 @@
 ;;
 ;; An AutoHotkey v2 script that provides emacs-like keybinding on Windows
 ;;
+#Requires AutoHotkey v2.0
+
 ;; NOTE: Keys that are intentionally *not* remapped to Emacs behavior
 ;;   - C-c / C-v : Copy / Paste (kept as the application's standard shortcuts)
 ;;   - C-z       : Undo (kept as the application's standard shortcut)
