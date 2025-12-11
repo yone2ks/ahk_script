@@ -222,7 +222,7 @@ scroll_down() {
     Send "{PgDn}"
 }
 
-^x::{
+$^x::{
   global is_pre_x
   if is_target()
     Send A_ThisHotkey
@@ -230,7 +230,7 @@ scroll_down() {
     is_pre_x := 1
 }
 
-^f::{
+$^f::{
   global is_pre_x
   if is_target()
     Send A_ThisHotkey
@@ -242,7 +242,7 @@ scroll_down() {
   }
 }
 
-;;^c::{
+;;$^c::{
 ;;  global is_pre_x
 ;;  if is_target()
 ;;    Send A_ThisHotkey
@@ -252,21 +252,21 @@ scroll_down() {
 ;;  }
 ;;}
 
-^d::{
+$^d::{
   if is_target()
     Send A_ThisHotkey
   else
     delete_char()
 }
 
-^h::{
+$^h::{
   if is_target()
     Send A_ThisHotkey
   else
     delete_backward_char()
 }
 
-^k::{
+$^k::{
   if is_target()
     Send A_ThisHotkey
   else
@@ -280,28 +280,28 @@ scroll_down() {
 ;;     open_line()
 ;; }
 
-^g::{
+$^g::{
   if is_target()
     Send A_ThisHotkey
   else
     quit()
 }
 
-;; ^j::{
+;; $^j::{
 ;;   if is_target()
 ;;     Send A_ThisHotkey
 ;;   else
 ;;     newline_and_indent()
 ;; }
 
-^m::{
+$^m::{
   if is_target()
     Send A_ThisHotkey
   else
     newline()
 }
 
-^i::{
+$^i::{
   if is_target()
     Send A_ThisHotkey
   else
@@ -320,35 +320,35 @@ scroll_down() {
 ;;   }
 ;; }
 
-^r::{
+$^r::{
   if is_target()
     Send A_ThisHotkey
   else
     isearch_backward()
 }
 
-;; ^w::{
+;; $^w::{
 ;;   if is_target()
 ;;     Send A_ThisHotkey
 ;;   else
 ;;     kill_region()
 ;; }
 
-!w::{
+$!w::{
   if is_target()
     Send A_ThisHotkey
   else
     kill_ring_save()
 }
 
-^y::{
+$^y::{
   if is_target()
     Send A_ThisHotkey
   else
     yank()
 }
 
-^/::{
+$^/::{
   if is_target()
     Send A_ThisHotkey
   else
@@ -356,7 +356,7 @@ scroll_down() {
 }
 
 ; Ctrl + Space (vk20) toggles selection mode like Emacs' set-mark-command
-^vk20::{
+$^vk20::{
   global is_mark_set
   if is_target()
     Send "{CtrlDown}{Space}{CtrlUp}"
@@ -368,7 +368,7 @@ scroll_down() {
   }
 }
 
-^@::{
+$^@::{
   global is_mark_set
   if is_target()
     Send A_ThisHotkey
@@ -380,56 +380,56 @@ scroll_down() {
   }
 }
 
-^a::{
+$^a::{
   if is_target()
     Send A_ThisHotkey
   else
     move_beginning_of_line()
 }
 
-^e::{
+$^e::{
   if is_target()
     Send A_ThisHotkey
   else
     move_end_of_line()
 }
 
-^p::{
+$^p::{
   if is_target()
     Send A_ThisHotkey
   else
     previous_line()
 }
 
-^n::{
+$^n::{
   if is_target()
     Send A_ThisHotkey
   else
     next_line()
 }
 
-^b::{
+$^b::{
   if is_target()
     Send A_ThisHotkey
   else
     backward_char()
 }
 
-;;^v::{
+;;$^v::{
 ;;  if is_target()
 ;;    Send A_ThisHotkey
 ;;  else
 ;;    scroll_down()
 ;;}
 
-!v::{
+$!v::{
   if is_target()
     Send A_ThisHotkey
   else
     scroll_up()
 }
 
-^l::{
+$^l::{
   if is_target()
     Send A_ThisHotkey
   else
